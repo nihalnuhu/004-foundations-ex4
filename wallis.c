@@ -1,10 +1,7 @@
-#include <assert.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 float wallis_pi(int);
-
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
@@ -23,4 +20,14 @@ int main(void) {
     }
   }
 }
-
+float wallis_pi(int n)
+{
+int i;
+float k,ans=1.0;
+for(i=1;i<=n;i++)
+{
+k=(float)(4*i*i)/(4*i*i-1);
+ans=ans*k;
+}
+return(2*ans);
+}
